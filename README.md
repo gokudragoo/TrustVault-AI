@@ -214,7 +214,4 @@ vercel --prod
 - https://docs.terminal3.io/t3n/overview/what-is-t3n
 - https://docs.terminal3.io/intro/platform
 - https://www.terminal3.io/products/agent-developer-kit
-
-## Key Rotation
-
-Rotate any key pasted into chat before using this outside a hackathon/demo environment. Keep `OPENAI_API_KEY`, `T3N_API_KEY`, `MONGODB_URI`, `ENCRYPTION_MASTER_KEY`, and `VAULT_ACCESS_KEY` out of Git.
+ 
