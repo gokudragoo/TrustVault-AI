@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: trustvault-ai-api
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: APP_BASE_URL
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: ENCRYPTION_MASTER_KEY
+        sync: false
+      - key: VAULT_ACCESS_KEY
+        sync: false
+      - key: AUTH_TOKEN_TTL_HOURS
+        value: 12
+      - key: T3N_ENVIRONMENT
+        value: testnet
+      - key: T3N_API_KEY
+        sync: false
+      - key: T3N_DID
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.5
+      - key: MONGODB_URI
+        sync: false
