@@ -46,5 +46,4 @@ function parseOrigins(value: string | undefined) {
       .map((origin) => origin?.trim())
       .filter((origin): origin is string => Boolean(origin))
   );
-  
-  
+}
